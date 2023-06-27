@@ -1,19 +1,13 @@
 import axios from "axios";
-import { sendMail } from "./email";
+import { sendEmail } from "./email";
 import { sendSMS } from "./sms";
-// import { NotificationProps } from "../../types";
-
-export interface NotificationProps {
-	userId: string;
-	amount: number;
-	notificationType: string;
-}
+import { NotificationOptions } from "../../types";
 
 export const automateNotification = async ({
 	userId,
 	amount,
 	notificationType,
-}: NotificationProps) => {
+}: NotificationOptions) => {
 	try {
 		const userOptions = {
 			method: "GET",
@@ -37,7 +31,7 @@ export const automateNotification = async ({
 		} else {
 			// Send notification
 			if (notificationType === "email") {
-				sendMail({
+				sendEmail({
 					from: "support@pakam.com",
 					to: email,
 					subject: "Insufficient funds",
@@ -46,7 +40,7 @@ export const automateNotification = async ({
 			} else if (notificationType === "mobile") {
 				// Send SMS
 				sendSMS({
-					to: phoneNumber,
+					to: phoneNumber /* number format is +234 */,
 					body: "You have insufficient funds in your wallet. You can fund your wallet by visiting our website and clicking on the fund wallet button or by clicking on this link: https://pakam.com/fund-wallet",
 				});
 			} else {

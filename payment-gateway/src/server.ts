@@ -7,7 +7,7 @@ const app: Express = express();
 const PORT = process.env.PORT || 5002;
 
 automateNotification({
-	userId: "649ab2b3ba0a7e028b8a3315",
+	userId: "649afa8ed124acea6c090b9d",
 	amount: 0,
 	notificationType: "email" /* notificationType is either 'email' or 'mobile' */,
 });

@@ -1,11 +1,5 @@
 import nodemailer from "nodemailer";
-
-export interface EmailProps {
-	from: string;
-	to: string;
-	subject: string;
-	text: string;
-}
+import { EmailOptions } from "../../types";
 
 const transport = nodemailer.createTransport({
 	host: "sandbox.smtp.mailtrap.io",
@@ -16,7 +10,7 @@ const transport = nodemailer.createTransport({
 	},
 });
 
-export const sendMail = async ({ to, from, subject, text }: EmailProps) => {
+export const sendEmail = async ({ to, from, subject, text }: EmailOptions) => {
 	try {
 		await transport.sendMail({ to, from, subject, text });
 		console.log("Email sent successfully");
