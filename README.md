@@ -6,6 +6,7 @@
 -    create a twilio account and copy the token, sid and number to the `.env` file of payment-gateway
 -    run `npm install` in the root directory of user-wallet, user-management and payment-gateway
 -    run `npm run dev` in the root directory of user-wallet, user-management and payment-gateway
+-    the automated notification function is located in the server file of the payment-gateway directory and can be tested once the payment-gateway server as well as the other two microservices are running
 
 # HOW TO RUN WITH PREFERRED PORTS
 
@@ -17,3 +18,4 @@
 -    create a twilio account and copy the token, sid and number to the `.env` file of payment-gateway
 -    run `npm install` in the root directory of user-wallet, user-management and payment-gateway
 -    run `npm run dev` in the root directory of user-wallet, user-management and payment-gateway
+-    the automated notification function is located in the server file of the payment-gateway directory and can be tested once the payment-gateway server as well as the other two microservices are running
