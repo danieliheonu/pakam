@@ -7,6 +7,7 @@
 -    run `npm install` in the root directory of user-wallet, user-management and payment-gateway
 -    run `npm run dev` in the root directory of user-wallet, user-management and payment-gateway
 -    the automated notification function is located in the server file of the payment-gateway directory and can be tested once the payment-gateway server as well as the other two microservices are running
+-    the email notifications can be seen in the mailtrap account while for the sms, you can pass your phone number in the `to` argument under the `sendSMS` function using the format provided
 
 # HOW TO RUN WITH PREFERRED PORTS
 
@@ -19,3 +20,4 @@
 -    run `npm install` in the root directory of user-wallet, user-management and payment-gateway
 -    run `npm run dev` in the root directory of user-wallet, user-management and payment-gateway
 -    the automated notification function is located in the server file of the payment-gateway directory and can be tested once the payment-gateway server as well as the other two microservices are running
+-    the email notifications can be seen in the mailtrap account while for the sms, you can pass your phone number in the `to` argument under the `sendSMS` function using the format provided
